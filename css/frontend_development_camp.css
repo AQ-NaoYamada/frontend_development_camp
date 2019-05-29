@@ -1,0 +1,69 @@
+.header {
+    text-align:center;
+}
+
+.headerTitle {
+    margin-top:0;
+}
+
+.eventInfo  {
+    max-width: 80%;
+    margin:0 auto;
+}
+
+.eventInfoTop {
+    margin-bottom: 0;
+}
+
+.eventInfoBottom {
+    margin-top: 0;
+}
+
+.menu {
+    max-width: 95%;
+    text-align: center;
+}
+
+.menuItem li {
+    width:250px;
+    border:1px solid black;
+    border-width:0 1px 0 0;
+    display: inline-block;
+    text-align: center;
+    font-size:16px;
+  }
+
+.menuItem li:first-child{
+    border-width:0 1px 0 1px;
+  }
+
+.contentTitle{
+    display: inline-block;
+    width:600px;
+    font-family: Milloyste, irohamaru-Regular;
+    text-align: center;
+}
+
+@font-face{
+    font-family: 'irohamaru-Regular';
+    src:url('../font/irohamaru-Regular.woff') format('woff');
+}
+
+.content{
+    display: inline-block;
+    font-family: 'irohamaru-Regular';
+}
+
+.day{
+    display: inline-block;
+    width:600px;
+}
+
+.dayTitle{
+    border:2px solid red;
+    border-width:0 0 2px 0;
+}
+
+.test{
+    font-family: 'Courier New', Courier, monospace;
+}
