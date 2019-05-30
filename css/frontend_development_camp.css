@@ -1,3 +1,11 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom:1px green solid;
+}
+
 .header {
     text-align:center;
 }
@@ -20,22 +28,35 @@
 }
 
 .menu {
-    max-width: 95%;
-    text-align: center;
+    width:auto;
 }
 
-.menuItem li {
-    width:250px;
+.menuItem{
+    display: flex;
+    flex-direction: row;
+}
+.menuItem > *{
+    width: calc(100% / 6);
+    text-align: center;
     border:1px solid black;
     border-width:0 1px 0 0;
-    display: inline-block;
-    text-align: center;
-    font-size:16px;
-  }
+}
 
-.menuItem li:first-child{
+.menuItem > *:first-child{
     border-width:0 1px 0 1px;
-  }
+}
+
+.border {
+    height:200px;
+    width:auto;
+}
+
+.borderLeft {
+    display: inline-block;
+    width:50%;
+    height:200px;
+    border-right:1px solid black;
+}
 
 .contentTitle{
     display: inline-block;

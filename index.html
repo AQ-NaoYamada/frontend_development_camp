@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/frontend_development_camp.css">
     <link rel="shortcut icon" href="./favicon.ico"  type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="./css/all.min.css">
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/frontend_development_camp.js"></script>
     <title>frontend development camp</title>
 </head>
 <body>
@@ -24,17 +26,21 @@
         <p class=eventInfoBottom>集合：箱根登山鉄道 大平台駅 at 10:40 am</p>
     </div>
     <div class=menu>
-        <ul class="menuItem" style="list-style-type: none">
-            <li>ABOUT</li>
-            <li>CONTENTS</li>
-            <li>TIME TABLE</li>
-            <li>BELONGINGS</li>
-            <li>ACCESS</li>
-            <li>FAQ</li>
-        </ul>
+        <div class="menuItem">
+            <p><a href="#about">ABOUT</a></p>
+            <p><a href="#contents">CONTENTS</a></p>
+            <p><a href="#timeTable">TIME TABLE</a></p>
+            <p><a href="#belongings">BELONGINGS</a></p>
+            <p><a href="#access">ACCESS</a></p>
+            <p><a href="#faq">FAQ</a></p>
+        </div>
     </div>
+
     <div class=body>
-        <div class=about>
+        <div class=border>
+            <div class=borderLeft></div>
+        </div>
+        <div id=about>
             <div class=contentTitle>
                 <h1 >ABOUT</h1>
             </div>
@@ -46,7 +52,10 @@
             </div>
         </div>
 
-        <div class=contents>
+        <div class=border>
+            <div class=borderLeft></div>
+        </div>
+        <div id=contents>
             <div class=contentTitle>
                 <h1>CONTENTS</h1>
             </div>
@@ -74,7 +83,10 @@
             </div>
         </div>
 
-        <div class=timeTable>
+        <div class=border>
+            <div class=borderLeft></div>
+        </div>
+        <div id=timeTable>
             <div class=contentTitle>
                 <h1>TIMETABLE</h1>
             </div>
@@ -113,7 +125,11 @@
                 </div>
             </div>
         </div>
-        <div class=belonging>
+
+        <div class=border>
+            <div class=borderLeft></div>
+        </div>
+        <div id=belongings>
             <div class=contentTitle>
                 <h1>BELONGINGS</h1>
             </div>
@@ -134,7 +150,11 @@
                 </p>
             </div>
         </div>
-        <div class=access>
+
+        <div class=border>
+            <div class=borderLeft></div>
+        </div>
+        <div id=access>
             <div class=contentTitle>
                 <h1>ACCESS</h1>
             </div>
@@ -144,7 +164,11 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6517.52731270464!2d139.0745!3d35.237253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a24923812339%3A0x531b61d7ce20c4bb!2z44CSMjUwLTA0MDUg56We5aWI5bed55yM6Laz5p-E5LiL6YOh566x5qC555S65aSn5bmz5Y-w77yU77yQ77yZ!5e0!3m2!1sja!2sjp!4v1559020174962!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
-        <div class=faq>
+
+        <div class=border>
+            <div class=borderLeft></div>
+        </div>
+        <div id=faq>
             <div class=contentTitle>
                 <h1>FAQ</h1>
             </div>
