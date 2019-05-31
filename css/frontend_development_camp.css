@@ -1,3 +1,9 @@
+@font-face{
+    font-family: 'irohamaru-Regular';
+    src:url('../font/irohamaru-Regular.woff') format('woff');
+}
+
+
 a {
     text-decoration: none;
 }
@@ -28,7 +34,8 @@ a:hover {
 }
 
 .menu {
-    width:auto;
+    width:90vw;
+    margin:0 auto;
 }
 
 .menuItem{
@@ -47,37 +54,47 @@ a:hover {
 }
 
 .border {
-    height:200px;
+    height:100px;
     width:auto;
 }
 
 .borderLeft {
     display: inline-block;
     width:50%;
-    height:200px;
+    height:100px;
     border-right:1px solid black;
 }
 
-.contentTitle{
-    display: inline-block;
-    width:600px;
-    font-family: Milloyste, irohamaru-Regular;
-    text-align: center;
+.contentWrap {
+    display:flex;
+    flex-direction:row;
 }
 
-@font-face{
-    font-family: 'irohamaru-Regular';
-    src:url('../font/irohamaru-Regular.woff') format('woff');
+.contentTitle{
+    width:30%;
+    text-align: center;    
+    font-family: Milloyste, irohamaru-Regular;
+    margin-top:auto;
+    margin-bottom: auto;
 }
+
 
 .content{
-    display: inline-block;
-    font-family: 'irohamaru-Regular';
+    width:70%;
+    font-family: Milloyste, irohamaru-Regular;
+}
+
+.dayContent{
+    width:70%;
+    font-family: Milloyste, irohamaru-Regular;
+
+    display:flex;
+    flex-direction:row;
 }
 
 .day{
-    display: inline-block;
-    width:600px;
+    width:50%;
+    padding:0 200px;
 }
 
 .dayTitle{
@@ -85,6 +102,17 @@ a:hover {
     border-width:0 0 2px 0;
 }
 
-.test{
-    font-family: 'Courier New', Courier, monospace;
+.belongingsList {
+    display:flex;
+    flex-direction:row;
 }
+
+.column {
+    padding-right:100px;
+}
+
+.ok {
+    position:relative;
+}
+
+

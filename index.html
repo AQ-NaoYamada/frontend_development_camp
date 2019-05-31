@@ -40,7 +40,8 @@
         <div class=border>
             <div class=borderLeft></div>
         </div>
-        <div id=about>
+
+        <div class=contentWrap id=about>
             <div class=contentTitle>
                 <h1 >ABOUT</h1>
             </div>
@@ -55,7 +56,7 @@
         <div class=border>
             <div class=borderLeft></div>
         </div>
-        <div id=contents>
+        <div class=contentWrap id=contents>
             <div class=contentTitle>
                 <h1>CONTENTS</h1>
             </div>
@@ -86,42 +87,38 @@
         <div class=border>
             <div class=borderLeft></div>
         </div>
-        <div id=timeTable>
+        <div class=contentWrap id=timeTable>
             <div class=contentTitle>
                 <h1>TIMETABLE</h1>
             </div>
-            <div class=content>
+            <div class=dayContent>
                 <div class=day>
-                    <h2 class=dayTitle>Day 1</h2>
-                    <ul style="list-style-type: none">
-                        <li>11:00 運営挨拶</li>
-                        <li>11:05 個人ワーク</li>
-                        <li>11:15 課題共有</li>
-                        <li>11:40 グループ分け＆挨拶</li>
-                        <li>12:00 お昼休憩</li>
-                        <li>13:00 作業開始</li>
-                        <li>18:00 中間発表</li>
-                        <li>18:30 チーム内話し合い</li>
-                        <li>18:45 片付け</li>
-                        <li>19:00 宴会</li>
-                        <li>21:00 自由時間</li>
-                    </ul>
+                    <div class=dayTitle>Day 1</div>
+                        <p>11:00 運営挨拶</p>
+                        <p>11:05 個人ワーク</p>
+                        <p>11:15 課題共有</p>
+                        <p>11:40 グループ分け＆挨拶</p>
+                        <p>12:00 お昼休憩</p>
+                        <p>13:00 作業開始</p>
+                        <p>18:00 中間発表</p>
+                        <p>18:30 チーム内話し合い</p>
+                        <p>18:45 片付け</p>
+                        <p>19:00 宴会</p>
+                        <p>21:00 自由時間</p>
                 </div>
         
                 <div class=day>
-                    <h2 class=dayTitle>Day 2</h2>
-                    <ul style="list-style-type: none">
-                        <li>9:00 挨拶運営</li>
-                        <li>9:05 作業開始</li>
-                        <li>12:00 お昼休憩</li>
-                        <li>13:00 成果発表＆FB</li>
-                        <li>12:00 お昼休憩</li>
-                        <li>14:45 休憩</li>
-                        <li>15:00 DX×FEのプロダクト考案</li>
-                        <li>16:35 プロダクト案の共有</li>
-                        <li>17:00 合宿最後の挨拶</li>
-                        <li>17:10 現地解散</li>
-                    </ul>
+                    <div class=dayTitle>Day 2</div>
+                        <p>9:00 挨拶運営</p>
+                        <p>9:05 作業開始</p>
+                        <p>12:00 お昼休憩</p>
+                        <p>13:00 成果発表＆FB</p>
+                        <p>12:00 お昼休憩</p>
+                        <p>14:45 休憩</p>
+                        <p>15:00 DX×FEのプロダクト考案</p>
+                        <p>16:35 プロダクト案の共有</p>
+                        <p>17:00 合宿最後の挨拶</p>
+                        <p>17:10 現地解散</p>
                 </div>
             </div>
         </div>
@@ -129,46 +126,75 @@
         <div class=border>
             <div class=borderLeft></div>
         </div>
-        <div id=belongings>
+        <div class=contentWrap id=belongings>
             <div class=contentTitle>
                 <h1>BELONGINGS</h1>
             </div>
-            <div class=content>
+            <div class=Content>
                 <p>忘れ物に注意です😎</p>
-                <p>
-                    <input type="checkbox">PCと電源
-                    <input type="checkbox">お金
-                    <input type="checkbox">スマホ
+
+                <!-- <form class=belongingsList name=form1>
+                    <div class=column>
+                        <p><input type="checkbox" name="check" value="PCと電源" onclick="checkBelongings();">PCと電源</p>
+                        <p><input type="checkbox" name="check" value="上着" onclick="checkBelongings();">上着</p>
+                        <p><input type="checkbox" name="check" value="やる気" onclick="checkBelongings();">やる気</p>
+                    </div>
+                    <div class=column>
+                        <p><input type="checkbox" name="check" value="パジャマ" onclick="checkBelongings();">パジャマ</p>
+                        <p><input type="checkbox" name="check" value="お金" onclick="checkBelongings();">お金</p>
+                    </div>
+                    <div class=column>
+                        <p><input type="checkbox" name="check" value="スマホ" onclick="checkBelongings();">スマホ</p>
+                        <p><input type="checkbox" name="check" value="お泊まりセット" onclick="checkBelongings();">お泊まりセット</p>
+                    </div>
+                </form>
+
+                <p id="ok"></p> -->
+
+                <div class=belongingsList>
+                    <div class=column>
+                        <p><input type="checkbox" name="check" value="PCと電源">PCと電源</p>
+                        <p><input type="checkbox" name="check" value="上着">上着</p>
+                        <p><input type="checkbox" name="check" value="やる気">やる気</p>
+                    </div>
+                    <div class=column>
+                        <p><input type="checkbox" name="check" value="お金">お金</p>
+                        <p><input type="checkbox" name="check" value="パジャマ">パジャマ</p>
+                    </div>
+                    <div class=column>
+                        <p><input type="checkbox" name="check" value="スマホ">スマホ</p>
+                        <p><input type="checkbox" name="check" value="お泊まりセット">お泊まりセット</p>
+                    </div>
+                </div>
+
+                <p id="ok">
+                    <img src="./images/good.png" alt="good" width=10% height=10%>
                 </p>
-                <p>
-                        <input type="checkbox">上着
-                        <input type="checkbox">パジャマ
-                        <input type="checkbox">お泊まりセット
-                </p>
-                <p>
-                        <input type="checkbox">やる気
-                </p>
+
+
+                
             </div>
         </div>
 
         <div class=border>
             <div class=borderLeft></div>
         </div>
-        <div id=access>
+        <div class=contentWrap id=access>
             <div class=contentTitle>
                 <h1>ACCESS</h1>
             </div>
             <div class=content>
                 <p><i class="fas fa-home"></i>神奈川県足柄下郡箱根町大平台 UNPACK409-4</p>
                 <p><i class="fa fa-subway"></i>箱根登山鉄道大平台駅　徒歩3分</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6517.52731270464!2d139.0745!3d35.237253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a24923812339%3A0x531b61d7ce20c4bb!2z44CSMjUwLTA0MDUg56We5aWI5bed55yM6Laz5p-E5LiL6YOh566x5qC555S65aSn5bmz5Y-w77yU77yQ77yZ!5e0!3m2!1sja!2sjp!4v1559020174962!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6517.52731270464!2d139.0745!3d35.237253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a24923812339%3A0x531b61d7ce20c4bb!2z44CSMjUwLTA0MDUg56We5aWI5bed55yM6Laz5p-E5LiL6YOh566x5qC555S65aSn5bmz5Y-w77yU77yQ77yZ!5e0!3m2!1sja!2sjp!4v1559020174962!5m2!1sja!2sjp" width="1200" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class=border>
             <div class=borderLeft></div>
         </div>
-        <div id=faq>
+
+        <div class=contentWrap id=faq>
             <div class=contentTitle>
                 <h1>FAQ</h1>
             </div>
@@ -176,7 +202,6 @@
                 ※準備中
             </div>
         </div>
-    </div>
-
+        
 </body>
 </html>
