@@ -3,13 +3,33 @@
     src:url('../font/irohamaru-Regular.woff') format('woff');
 }
 
+@font-face{
+    font-family: 'Milloyste';
+    src:url('../font/Milloyste\ Font\ by\ Keithzo\ \(7NTypes\).woff') format('woff');
+}
+
+.sticky {
+    position: -webkit-sticky;/* safari */
+    position: sticky;
+    top: 500px;
+}
+
+body {
+    font-size: 14px;
+}
+a:visited {
+    color: #ED635E;
+}
 
 a {
     text-decoration: none;
+    color: #ED635E;
+    transition: .3s;
+    line-height: 2;
 }
 
-a:hover {
-    border-bottom:1px green solid;
+.menu a:hover {
+    border-bottom:1px #ED635E solid;
 }
 
 .header {
@@ -17,20 +37,38 @@ a:hover {
 }
 
 .headerTitle {
-    margin-top:0;
+    margin-top:20px;
 }
 
 .eventInfo  {
     max-width: 80%;
-    margin:0 auto;
+    margin:20px auto;
+    letter-spacing: 3px;
 }
 
 .eventInfoTop {
-    margin-bottom: 0;
+    margin-bottom:10px;
+    font-family: Milloyste,irohamaru-Regular;
+    font-size: 26px;
 }
 
+.eventInfoTopBrackets {
+    font-size: 14px;
+}
+
+.eventPlace {
+    font-size: 20px;
+    padding-left: 15px;
+}
 .eventInfoBottom {
-    margin-top: 0;
+    margin-top:10px;
+    font-family: Milloyste,irohamaru-Regular;
+    font-size: 18px;
+}
+
+.meetingTime {
+    font-size: 20px;
+    padding-left: 15px;
 }
 
 .menu {
@@ -54,12 +92,12 @@ a:hover {
 }
 
 .border {
-    height:100px;
+    margin:50px 0;
     width:auto;
 }
 
 .borderLeft {
-    display: inline-block;
+    display: flex;
     width:50%;
     height:100px;
     border-right:1px solid black;
@@ -68,51 +106,92 @@ a:hover {
 .contentWrap {
     display:flex;
     flex-direction:row;
+    margin:20px auto;
+    width:90vw;
 }
 
 .contentTitle{
-    width:30%;
+    width:20%;
     text-align: center;    
+    font-size: 25px;
+    letter-spacing: 1px;
     font-family: Milloyste, irohamaru-Regular;
     margin-top:auto;
     margin-bottom: auto;
 }
 
-
-.content{
-    width:70%;
-    font-family: Milloyste, irohamaru-Regular;
+.content {
+    width:80%;
+    font-family: irohamaru-Regular;
 }
 
-.dayContent{
-    width:70%;
-    font-family: Milloyste, irohamaru-Regular;
 
+.contentsOverview {
+    margin-bottom: 30px;
+}
+
+.teamList {
+    margin-left:30px;
+}
+
+.teamList > li {
+    margin-top:20px;
+}
+
+/* .body a {
+    color:red;
+    text-decoration: none;
+} */
+
+.scheduleWrap{
     display:flex;
     flex-direction:row;
 }
 
-.day{
+.dateWrap{
     width:50%;
-    padding:0 200px;
+    padding:0 15%;
 }
 
-.dayTitle{
+.date {
     border:2px solid red;
     border-width:0 0 2px 0;
+    margin-bottom: 15px;
 }
 
-.belongingsList {
+.schedule li {
+    margin-bottom: 10px;
+}
+
+.belongingsContent {
+    position: relative;
+}
+
+.belongingsText {
+    margin-bottom: 10px;
+}
+
+.belongingsWrap {
+    position: relative;
     display:flex;
-    flex-direction:row;
+    flex-wrap: wrap;
+    width:500px;
 }
 
-.column {
-    padding-right:100px;
+.belongings {
+    width:150px;
+    padding-bottom: 7px;
 }
 
-.ok {
-    position:relative;
+.belongingsWrap li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#ok {
+    position: absolute;
+    top: 0px;
+    left: 200px;
 }
 
 
