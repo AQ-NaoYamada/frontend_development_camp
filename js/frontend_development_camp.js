@@ -33,14 +33,14 @@ $(function () {
 });
 
 $(function () {
-   $('input[name="check"]').on('change', function () {
+   $('input[name="belongings"]').on('change', function () {
       /// チェックされたvalue値を配列として取得
-      var belongingsList = $('input[name="check"]:checked').map(function () {
+      var belongingsList = $('input[name="belongings"]:checked').map(function () {
          return $(this).val();
       }).get();
       if (belongingsList.length === 7) {
          var ok = document.getElementById('ok');
-         ok.innerHTML = '<img src="./images/good.png" alt="good" width=80px height=80px>';
+         ok.innerHTML = '<img src="./images/good.png" alt="good" width=100px height=100px>';
       } else {
          document.getElementById('ok').innerText = ''
       };
@@ -71,5 +71,15 @@ $(function() {
    pagetop.click(function () {
      $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
      return false;
+   });
+ });
+
+$(function() {
+   $('.contentTitle').on('inview', function(event, isInView){
+     if (isInView) {
+         $(this).addClass('left');
+     }else{
+         $(this).removeClass('left'); //elseをいれなければ、一度きりのアニメーションになる
+     }
    });
  });
