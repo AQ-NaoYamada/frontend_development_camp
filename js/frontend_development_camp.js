@@ -74,12 +74,54 @@ $(function() {
    });
  });
 
-$(function() {
-   $('.contentTitle').on('inview', function(event, isInView){
-     if (isInView) {
-         $(this).addClass('left');
-     }else{
-         $(this).removeClass('left'); //elseをいれなければ、一度きりのアニメーションになる
-     }
+// $(function() {
+//    $('.contentTitle').on('inview', function(event, isInView){
+//      if (isInView) {
+//          $(this).addClass('left');
+//      }else{
+//          $(this).removeClass('left'); //elseをいれなければ、一度きりのアニメーションになる
+//      }
+//    });
+//  });
+
+$(function(){
+ 
+   // モーダルウィンドウが開くときの処理    
+   $(".modalOpen").click(function(){
+           
+       var navClass = $(this).attr("class"),
+           href = $(this).attr("href");
+               
+           $(href).fadeIn();
+       $(this).addClass("open");
+       return false;
    });
- });
+    
+   // モーダルウィンドウが閉じるときの処理    
+   $(".modalClose").click(function(){
+       $(this).parents(".modalWrap").fadeOut();
+       $(".modalOpen").removeClass("open");
+       return false;
+   });  
+       
+   });
+
+$(function() {
+ 
+  // ①タブをクリックしたら発動
+  $('.tab').click(function() {
+ 
+    // ②クリックされたタブの順番を変数に格納
+    var index = $('.tab').index(this);
+ 
+    // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
+    $('.tab').removeClass('active');
+ 
+    // ④クリックされたタブにクリック済みデザインを適用する
+    $(this).addClass('active');
+ 
+    // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
+    $('.area').removeClass('show').eq(index).addClass('show');
+ 
+  });
+});
