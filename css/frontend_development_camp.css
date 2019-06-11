@@ -103,13 +103,30 @@
   margin:0 auto;  
 }
 
-.area>img {
+.area img {
   width: 400px;
   height: auto;
 }
 
 .area.show {
   display: block;
+}
+
+.sliderWrap {
+  width: 100%;
+  margin : 0px auto;
+}
+
+.slider{
+  margin: 0px auto;
+  width: 80%;
+  text-align:center;
+}
+
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
 }
 
 
@@ -149,9 +166,9 @@ a {
   color: #ED635E;
 }
 
-a:visited {
+/* a:visited {
   color: #ED635E;
-}
+} */
 
 a::after {
   position: absolute;
@@ -674,3 +691,4 @@ a:hover::after {
     margin-bottom: 15px;
   }
 }
+
