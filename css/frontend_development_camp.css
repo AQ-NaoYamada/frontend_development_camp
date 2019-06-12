@@ -1,3 +1,95 @@
+/* サイドオープン時にメインコンテンツを覆う部分 */
+.overlay {
+  content: '';
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 3;
+}
+
+.overlay::after {
+  content: "この部分をクリックで閉まる";
+  visibility: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: rgba(255,255,255,0);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.side-open .overlay {
+  visibility: visible;
+  cursor: pointer;
+  background: rgba(0,0,0,.7);
+}
+.side-open .overlay::after {
+  visibility: visible;
+  color: rgba(255,255,255,.8);
+}
+
+/* サイドメニュー ※リストのスタイルは省略 */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  padding-top: 150px;
+  padding-left : 50px;
+  text-align : left;
+  font-size: 13px;
+  background: #2A408E;
+  z-index: -1;
+  animation: fadeIn 2s ease 0s 1 normal;
+}
+
+/* 開閉用ボタン ※ボタンの細かいスタイルは省略 */
+.side-menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background: #ccc;
+  cursor: pointer;
+  z-index: 4;
+}
+
+/* メインコンテンツ */
+.jscWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 13px;
+  background: #FFF;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 2;
+}
+
+/* サイドメニューオープン */
+.side-open .jscWrap,
+.side-open .overlay {
+  -webkit-transform: translate3d(-300px, 0, 0);
+  transform: translate3d(-300px, 0, 0);
+}
+
 .left {
   -webkit-animation: left .5s ease-out .3s 1 normal forwards;
   animation: left .5s ease .3s 1 normal forwards;
@@ -310,7 +402,7 @@ a:hover::after {
 ----------------------------------------------------------------------*/
 
 .wrap {
-  margin: 20px 0 10px;
+  margin: 0px 0 10px;
   animation: fadeIn 2s ease 0s 1 normal;
 }
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/zdo_drawer_menu.css">
     <link rel="stylesheet" href="./css/frontend_development_camp.css">
 
     <title>frontend development camp</title>
@@ -28,6 +29,8 @@
     <div class="loadingAfterWrap jscLoadingAfterWrap dn">
         <img src="./images/main_chojugiga.png" alt="鳥獣戯画カエル" width="412" height="370" class="buruburu">
     </div>
+
+
 
     <div class="wrap jscWrap dn">
         <div class=header>
@@ -255,7 +258,7 @@
 
         <div class=border></div>
 
-        <dl class="contentWrap memoryWrap">
+        <dl class="contentWrap memoryWrap" id="memory">
             <dt class="contentTitle">
                 <a href="#modal01" class="modalOpen">合宿の思い出</a>
             </dt>
@@ -292,7 +295,7 @@
 
         <div class=border></div>
 
-        <dl class="contentWrap memoryWrap">
+        <dl class="contentWrap memoryWrap" id="memory2">
             <dt class="contentTitle">
                 <a href="#modal02" class="modalOpen">合宿の思い出2</a>
             </dt>
@@ -321,13 +324,35 @@
                 </div>
             </dd>
         </dl>
-
     </div>
+
+    <!-- サイドオープン時メインコンテンツを覆う -->
+    <div class="overlay" id="js__overlay"></div>
+
+    <!-- サイドメニュー -->
+    <nav class="side-menu dn">
+        <ul style="list-style: none;">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contents">CONTACTS</a></li>
+            <li><a href="#timeTable">TIME TABLE</a></li>
+            <li><a href="#belongings">BELONGINGS</a></li>
+            <li><a href="#access">ACCESS</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#memory">合宿の思い出</a></li>
+        </ul>
+    </nav>
+
+    <!-- 開閉用ボタン -->
+    <div class="side-menu-btn dn" id="js__sideMenuBtn"></div>
+
+
+
 
     <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="./js/jQuery.inview.js"></script>
     <!-- <script src="./js/modaal.min.js"></script> -->
     <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="./js/zdo_drawer_menu.js"></script>
     <script type="text/javascript" src="./js/frontend_development_camp.js"></script>
 </body>
 

@@ -10,6 +10,8 @@ var firstFunction = function () {
    setTimeout(function () {
       $(".jscLoadingAfterWrap").addClass("dn");
       $(".jscWrap").removeClass("dn");
+      $(".side-menu").removeClass("dn");
+      $(".side-menu-btn").removeClass("dn");
    }, 2400);
 }
 
@@ -48,31 +50,31 @@ $(function () {
 });
 
 
-$(function() {
+$(function () {
    var appear = false;
    var pagetop = $('#page_top');
    $(window).scroll(function () {
-     if ($(this).scrollTop() > 100) {  //100pxスクロールしたら
-       if (appear == false) {
-         appear = true;
-         pagetop.stop().animate({
-           'bottom': '50px' //下から50pxの位置に
-         }, 300); //0.3秒かけて現れる
-       }
-     } else {
-       if (appear) {
-         appear = false;
-         pagetop.stop().animate({
-           'bottom': '-50px' //下から-50pxの位置に
-         }, 300); //0.3秒かけて隠れる
-       }
-     }
+      if ($(this).scrollTop() > 100) {  //100pxスクロールしたら
+         if (appear == false) {
+            appear = true;
+            pagetop.stop().animate({
+               'bottom': '50px' //下から50pxの位置に
+            }, 300); //0.3秒かけて現れる
+         }
+      } else {
+         if (appear) {
+            appear = false;
+            pagetop.stop().animate({
+               'bottom': '-50px' //下から-50pxの位置に
+            }, 300); //0.3秒かけて隠れる
+         }
+      }
    });
    pagetop.click(function () {
-     $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
-     return false;
+      $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
+      return false;
    });
- });
+});
 
 // $(function() {
 //    $('.contentTitle').on('inview', function(event, isInView){
@@ -84,50 +86,60 @@ $(function() {
 //    });
 //  });
 
-$(function(){
- 
+$(function () {
+
    // モーダルウィンドウが開くときの処理    
-   $(".modalOpen").click(function(){
-           
-       var navClass = $(this).attr("class"),
-           href = $(this).attr("href");
-               
-           $(href).fadeIn();
-       $(this).addClass("open");
-       return false;
-   });
-    
-   // モーダルウィンドウが閉じるときの処理    
-   $(".modalClose").click(function(){
-       $(this).parents(".modalWrap").fadeOut();
-       $(".modalOpen").removeClass("open");
-       return false;
-   });  
-       
+   $(".modalOpen").click(function () {
+
+      var navClass = $(this).attr("class"),
+         href = $(this).attr("href");
+
+      $(href).fadeIn();
+      $(this).addClass("open");
+      return false;
    });
 
-$(function() {
- 
-  // ①タブをクリックしたら発動
-  $('.tab').click(function() {
- 
-    // ②クリックされたタブの順番を変数に格納
-    var index = $('.tab').index(this);
- 
-    // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
-    $('.tab').removeClass('active');
- 
-    // ④クリックされたタブにクリック済みデザインを適用する
-    $(this).addClass('active');
- 
-    // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
-    $('.area').removeClass('show').eq(index).addClass('show');
- 
-  });
+   // モーダルウィンドウが閉じるときの処理    
+   $(".modalClose").click(function () {
+      $(this).parents(".modalWrap").fadeOut();
+      $(".modalOpen").removeClass("open");
+      return false;
+   });
+
+});
+
+$(function () {
+
+   // ①タブをクリックしたら発動
+   $('.tab').click(function () {
+
+      // ②クリックされたタブの順番を変数に格納
+      var index = $('.tab').index(this);
+
+      // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
+      $('.tab').removeClass('active');
+
+      // ④クリックされたタブにクリック済みデザインを適用する
+      $(this).addClass('active');
+
+      // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
+      $('.area').removeClass('show').eq(index).addClass('show');
+
+   });
 });
 
 $('.slider').slick({
-   autoplay:true,
-   autoplaySpeed:5000,
-   dots:true,
+   autoplay: true,
+   autoplaySpeed: 5000,
+   dots: true,
 });
+
+$(function () {
+   var $body = $('body');
+   $('#js__sideMenuBtn').on('click', function () {
+     $body.toggleClass('side-open');
+     $('#js__overlay').on('click', function () {
+       $body.removeClass('side-open');
+     });
+   });
+ });
